@@ -352,19 +352,25 @@ export function LeftSidebar() {
                 className="flex items-center text-[#6C99F2] text-xs hover:opacity-80"
                 onClick={() => window.open(GUIDE_URL, "_blank")}
               >
-                <svg
-                  className="mr-1.5 w-4 h-4"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <a
+                  href="https://omni3d.gitbook.io/omni3d/how-it-works"
+                  target="_blank"
+                  className="flex items-center"
                 >
-                  <path
-                    d="M4 2H12V14H4V2Z"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                </svg>
-                Guide
+                  <svg
+                    className="mr-1.5 w-4 h-4"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 2H12V14H4V2Z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                  Guide
+                </a>
               </button>
             </div>
           </div>

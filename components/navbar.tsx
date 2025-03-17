@@ -14,7 +14,8 @@ export function Navbar({
   setSidebarOpen?: (open: boolean) => void;
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const contractAddress = "TBATBATBATBATBATBATBATBATBATBATBATBAT";
+  const contractAddress =
+    "The contract will be published on our official Twitter";
   const { addToast } = useToast();
 
   return (
@@ -118,13 +119,15 @@ export function Navbar({
         {/* Desktop navigation */}
         <nav className="hidden md:flex space-x-6">
           <a
-            href="#"
+            href="https://linktr.ee/omni3dofficial"
+            target="_blank"
             className="text-white text-sm hover:text-[#d1afe4] transition-colors"
           >
             Socials
           </a>
           <a
-            href="#"
+            href="https://omni3d.gitbook.io/omni3d"
+            target="_blank"
             className="text-white text-sm hover:text-[#d1afe4] transition-colors"
           >
             Docs
@@ -133,7 +136,7 @@ export function Navbar({
             href="#"
             className="text-white text-sm hover:text-[#d1afe4] transition-colors"
           >
-            Token
+            Token <span className="text-[#696969]">(Coming Soon)</span>
           </a>
         </nav>
 
@@ -167,8 +170,8 @@ export function Navbar({
             {contractAddress}
           </span>
           <CopyButton
-            text={contractAddress}
-            successMessage="Contract address copied!"
+            text={"https://x.com/omni3Dofficial"}
+            successMessage="Contract copied!"
           />
         </div>
 
@@ -219,7 +222,9 @@ export function Navbar({
             });
           }}
         >
-          Telegram
+          <a href="https://t.me/omni3d" target="_blank">
+            Telegram
+          </a>
         </button>
 
         {/* Mobile menu button */}
@@ -254,8 +259,8 @@ export function Navbar({
             <div className="flex items-center text-white text-sm py-2 overflow-hidden">
               <span className="mr-2 truncate">{contractAddress}</span>
               <CopyButton
-                text={contractAddress}
-                successMessage="Contract address copied!"
+                text={"https://x.com/omni3Dofficial"}
+                successMessage="Contract copied!"
               />
             </div>
 

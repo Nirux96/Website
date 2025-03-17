@@ -245,14 +245,25 @@ export function Navbar({
         <div className="absolute top-14 left-0 right-0 bg-[#181818] border-b border-[#262626] z-50 md:hidden">
           <div className="px-4 py-3 space-y-3">
             <nav className="flex flex-col space-y-3">
-              <a href="#" className="text-white text-sm hover:text-[#d1afe4]">
+              <a
+                href="https://linktr.ee/omni3dofficial"
+                target="_blank"
+                className="text-white text-sm hover:text-[#d1afe4] transition-colors"
+              >
                 Socials
               </a>
-              <a href="#" className="text-white text-sm hover:text-[#d1afe4]">
+              <a
+                href="https://omni3d.gitbook.io/omni3d"
+                target="_blank"
+                className="text-white text-sm hover:text-[#d1afe4] transition-colors"
+              >
                 Docs
               </a>
-              <a href="#" className="text-white text-sm hover:text-[#d1afe4]">
-                Token
+              <a
+                href="#"
+                className="text-white text-sm hover:text-[#d1afe4] transition-colors"
+              >
+                Token <span className="text-[#696969]">(Coming Soon)</span>
               </a>
             </nav>
 

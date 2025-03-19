@@ -71,7 +71,7 @@ export function LeftSidebar() {
     {
       id: "triangle",
       name: "Triangle",
-      icon: (isSelected) => (
+      icon: (isSelected:any) => (
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Component%201%20%281%29-r4c4mOJUj6Fi9oX6SrzqfmdyUwTAY2.png"
           alt="Triangle topology"
@@ -82,7 +82,7 @@ export function LeftSidebar() {
     {
       id: "quad",
       name: "Quad",
-      icon: (isSelected) => (
+      icon: (isSelected:any) => (
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Component%201%20%282%29-sW38T0qExAr0YeyhizZNWG8RGh4TNF.png"
           alt="Quad topology"
@@ -317,7 +317,7 @@ export function LeftSidebar() {
   return (
     <div className="w-full h-full bg-[#262626] border-r border-[#262626] flex flex-col overflow-hidden">
       {/* Scrollable content */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto pb-[140px] md:pb-0">
         <div className="p-4 bg-[#1e1e1e] rounded-md m-4 mb-2">
           <p className="text-white text-sm leading-tight">
             Unleash the power of AI to create characters, objects, and entire
@@ -550,7 +550,7 @@ export function LeftSidebar() {
       </div>
 
       {/* Fixed Generate button at the bottom */}
-      <div className="p-4 border-t border-[#262626]">
+      <div className="sticky bottom-0 left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
         <div className="mb-4">
           <div className="flex justify-between items-center text-[#696969] text-xs mb-1">
             <span>Estimated time:</span>

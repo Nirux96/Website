@@ -203,3 +203,18 @@ textarea:focus {
     display: none;
   }
 }
+
+
+/* Add this to the end of the file */
+/* Fix for the generate button on mobile */
+@media (max-width: 768px) {
+  .sticky {
+    position: sticky;
+    -webkit-position: sticky;
+  }
+
+  /* Ensure the sidebar scrolls properly on iOS */
+  #left-sidebar {
+    -webkit-overflow-scrolling: touch;
+  }
+}

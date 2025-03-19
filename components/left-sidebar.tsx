@@ -71,7 +71,7 @@ export function LeftSidebar() {
     {
       id: "triangle",
       name: "Triangle",
-      icon: (isSelected:any) => (
+      icon: (isSelected: any) => (
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Component%201%20%281%29-r4c4mOJUj6Fi9oX6SrzqfmdyUwTAY2.png"
           alt="Triangle topology"
@@ -82,7 +82,7 @@ export function LeftSidebar() {
     {
       id: "quad",
       name: "Quad",
-      icon: (isSelected:any) => (
+      icon: (isSelected: any) => (
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Component%201%20%282%29-sW38T0qExAr0YeyhizZNWG8RGh4TNF.png"
           alt="Quad topology"
@@ -548,73 +548,73 @@ export function LeftSidebar() {
           </div>
         </div>
         {/* Generate on mobile */}
-        <div className="block md:hidden md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
-        <div className="mb-4">
-          <div className="flex justify-between items-center text-[#696969] text-xs mb-1">
-            <span>Estimated time:</span>
-            <span>1-2 minutes</span>
+        <div className=" md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
+          <div className="mb-4">
+            <div className="flex justify-between items-center text-[#696969] text-xs mb-1">
+              <span>Estimated time:</span>
+              <span>1-2 minutes</span>
+            </div>
+            <div className="flex justify-between items-center text-[#696969] text-xs">
+              <span>Credit cost:</span>
+              <span className="flex items-center">
+                <span className="text-[#c5f955] mr-1">⭐</span>
+                Free ({MAX_GENERATIONS - generationsLeft}/{MAX_GENERATIONS})
+              </span>
+            </div>
           </div>
-          <div className="flex justify-between items-center text-[#696969] text-xs">
-            <span>Credit cost:</span>
-            <span className="flex items-center">
-              <span className="text-[#c5f955] mr-1">⭐</span>
-              Free ({MAX_GENERATIONS - generationsLeft}/{MAX_GENERATIONS})
-            </span>
-          </div>
+          <button
+            className="w-full py-2 bg-[#d1afe4] text-white rounded-md flex items-center justify-center disabled:opacity-50"
+            onClick={handleGenerate}
+            disabled={isGenerating || !promptText.trim()}
+          >
+            {isGenerating ? (
+              <>
+                <svg
+                  className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Generating...
+              </>
+            ) : (
+              <>
+                <svg
+                  className="mr-2"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6L8 2Z"
+                    fill="white"
+                  />
+                </svg>
+                Generate
+              </>
+            )}
+          </button>
         </div>
-        <button
-          className="w-full py-2 bg-[#d1afe4] text-white rounded-md flex items-center justify-center disabled:opacity-50"
-          onClick={handleGenerate}
-          disabled={isGenerating || !promptText.trim()}
-        >
-          {isGenerating ? (
-            <>
-              <svg
-                className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-              Generating...
-            </>
-          ) : (
-            <>
-              <svg
-                className="mr-2"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6L8 2Z"
-                  fill="white"
-                />
-              </svg>
-              Generate
-            </>
-          )}
-        </button>
-      </div>
       </div>
 
       {/* Fixed Generate button at the bottom */}
-      <div className="hidden md:block md:sticky md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
+      <div className="md:sticky md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
         <div className="mb-4">
           <div className="flex justify-between items-center text-[#696969] text-xs mb-1">
             <span>Estimated time:</span>

@@ -9,17 +9,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+        <title>OMNI3D</title>
+        <meta name="description" content="Omni 3D - AI-powered 3D model generation" />
+      </head>
       <body>
         <ToastProvider>{children}</ToastProvider>
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'
-
-export const metadata = {
-      generator: 'v0.dev'
-    };

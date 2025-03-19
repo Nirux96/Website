@@ -123,10 +123,10 @@ textarea:focus {
   }
 
   /* Ensure proper height on mobile */
-  /* .h-[calc(100vh-160px)] {
-    height: calc(100vh - 160px);
-    height: calc(var(--vh, 1vh) * 100 - 160px);
-  } */
+  .h-\[calc\(100vh-160px\)\] {
+    height: calc(100vh - 160px); /* Fallback */
+    height: calc(var(--vh, 1vh) * 100 - 160px); /* Modern browsers */
+  }
 
   /* Improve touch targets */
   button,

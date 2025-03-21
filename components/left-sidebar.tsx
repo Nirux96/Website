@@ -13,7 +13,7 @@ export function LeftSidebar() {
   const [polycountLevel, setPolycountLevel] = useState("high");
   const [topology, setTopology] = useState("quad");
   const [symmetry, setSymmetry] = useState("auto");
-  const [artStyle, setArtStyle] = useState("realistic");
+  const [artStyle, setArtStyle] = useState("pbr");
   const [isGenerating, setIsGenerating] = useState(false);
   const [enablePBR, setEnablePBR] = useState(false);
   const { addToast } = useToast();
@@ -32,18 +32,18 @@ export function LeftSidebar() {
 
   // Art style options
   const artStyles = [
-    {
-      id: "realistic",
-      name: "Realistic",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-in7qowGSQsA8EbXkdv705wL4OFsdjw.png",
-    },
-    {
-      id: "sculpture",
-      name: "Sculpture",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%281%29-nLpTAVABa12D2PMXyGVFiHHX3hpxsm.png",
-    },
+    // {
+    //   id: "realistic",
+    //   name: "Realistic",
+    //   image:
+    //     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-in7qowGSQsA8EbXkdv705wL4OFsdjw.png",
+    // },
+    // {
+    //   id: "sculpture",
+    //   name: "Sculpture",
+    //   image:
+    //     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%281%29-nLpTAVABa12D2PMXyGVFiHHX3hpxsm.png",
+    // },
     {
       id: "pbr",
       name: "PBR",
@@ -548,7 +548,7 @@ export function LeftSidebar() {
           </div>
         </div>
         {/* Generate on mobile */}
-        <div className=" md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
+        <div className=" md:hidden md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
           <div className="mb-4">
             <div className="flex justify-between items-center text-[#696969] text-xs mb-1">
               <span>Estimated time:</span>
@@ -614,7 +614,7 @@ export function LeftSidebar() {
       </div>
 
       {/* Fixed Generate button at the bottom */}
-      <div className="md:sticky md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
+      <div className="hidden md:block md:sticky md:bottom-0 md:left-0 right-0 p-4 border-t border-[#262626] bg-[#262626] z-10">
         <div className="mb-4">
           <div className="flex justify-between items-center text-[#696969] text-xs mb-1">
             <span>Estimated time:</span>

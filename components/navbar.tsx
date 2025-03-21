@@ -169,10 +169,10 @@ export function Navbar({
           <span className="mr-2 truncate max-w-[120px] lg:max-w-none">
             {contractAddress}
           </span>
-          <CopyButton
+          {/* <CopyButton
             text={"https://x.com/omni3Dofficial"}
             successMessage="Contract copied!"
-          />
+          /> */}
         </div>
 
         {/* Globe button */}
@@ -269,10 +269,10 @@ export function Navbar({
 
             <div className="flex items-center text-white text-sm py-2 overflow-hidden">
               <span className="mr-2 truncate">{contractAddress}</span>
-              <CopyButton
+              {/* <CopyButton
                 text={"https://x.com/omni3Dofficial"}
                 successMessage="Contract copied!"
-              />
+              /> */}
             </div>
 
             <div className="flex flex-col space-y-2">

@@ -8,7 +8,7 @@ import { EXAMPLE_PROMPTS, MAX_GENERATIONS, GUIDE_URL } from "@/lib/constants";
 export function LeftSidebar() {
   const [promptText, setPromptText] = useState("");
   const [fixedSeed, setFixedSeed] = useState(true);
-  const [seedValue, setSeedValue] = useState("42");
+  const [seedValue, setSeedValue] = useState("243920858");
   const [polycount, setPolycount] = useState("adaptive");
   const [polycountLevel, setPolycountLevel] = useState("high");
   const [topology, setTopology] = useState("quad");
